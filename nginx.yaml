@@ -19,12 +19,3 @@ spec:
         image: k8s.gcr.io/nginx:1.7.9
         ports:
         - containerPort: 80
-- task: Kubernetes@1
-  inputs:
-    connectionType: 'Azure Resource Manager'
-    azureSubscriptionEndpoint: 'ECTP - IT - DEV-UAT(86ea7b49-f671-431f-a855-bd99de7f3591)'
-    azureResourceGroup: 'aks-devtest-rg-use-it-dev'
-    kubernetesCluster: 'useaks001clsdev'
-    command: 'apply'
-    secretType: 'dockerRegistry'
-    containerRegistryType: 'Azure Container Registry'
